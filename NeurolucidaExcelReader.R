@@ -17,7 +17,7 @@
 
 
 
-library(xlsx)
+library(openxlsx)
 library(dplyr)
 
 ## Function definitions
@@ -127,7 +127,11 @@ getDistance <- function (sheet) {
                                    dendriteLength, spineDensity)))
 }
 
-# Function to calculate Spine density for the whole neuron
+# Function to calculate Spine density for the whole dendrite
+# Spine density could have been taken from the Tree Spines-Dendrite sheet, 
+# but to save on memory, it was more efficient to just calculate it here.
+# Note that these are spines/10 microns, not spines/1 micron as in the 
+# Tree Spines-Dendrite Worksheet.
 getTotal <- function (sheet.neuron, sheet.spines, sheet.branching){
         
         # Dendrite Length
@@ -195,19 +199,17 @@ inFile.name <- readline("Enter the filename: ")
 inFile.path <- paste(inFile.dir,inFile.name, sep = "\\")
 inFile.group <- getGroup()
 
-# Open the file and read the relevant sheets
-sheet.branching <- read.xlsx(inFile.path, 
-                   sheetIndex = "Tree Totals-Dendrite", 
-                   header=TRUE)
+# Open the file and read the relevant sheets (Tree Totals-Dendrite)
+sheet.branching <- read.xlsx(inFile.path, sheet =  3, colNames=TRUE)
 sheet.neuron    <- read.xlsx(inFile.path, 
-                   sheetIndex = "Neuron Summary", 
-                   header=TRUE)
+                   sheet = 5, 
+                   colNames=TRUE)
 sheet.distance  <- read.xlsx(inFile.path, 
-                   sheetIndex = "Tortuous Distance-Dendrite", 
-                   header = TRUE)
+                   sheet = 12, 
+                   colNames = TRUE)
 sheet.spines    <- read.xlsx(inFile.path, 
-                   sheetIndex = "Spine Details - Automatic (Ext", 
-                   header = TRUE)
+                   sheet = 6, 
+                   colNames = TRUE)
 
 # Summary data by branch order, distance from soma, and the entire 
 # apical dendrite
