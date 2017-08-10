@@ -14,15 +14,15 @@ If you are fortunate enough to have access to Neurolucida360 for 3D neuron recon
 
 ### The sample data
 
-example.xlsx <- original neurolucida xlsx file
+* example.xlsx <- original neurolucida xlsx file
 
 ### The sample output
 
-example-by branch order.csv <- summary by branch order for a single file
-example-by distance.csv <- summary by distance from soma for a single file
-example_branching.csv <- summary by branch order for an entire group
-example_distance.csv <- summary by distance from soma for an entire group
-example_summary.csv <- summary of all dendrites and spines for an entire group
+* example-by branch order.csv <- summary by branch order for a single file
+* example-by distance.csv <- summary by distance from soma for a single file
+* example_branching.csv <- summary by branch order for an entire group
+* example_distance.csv <- summary by distance from soma for an entire group
+* example_summary.csv <- summary of all dendrites and spines for an entire group
 
 ### Assumptions
 
