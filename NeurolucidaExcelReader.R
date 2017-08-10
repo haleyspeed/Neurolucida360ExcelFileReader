@@ -150,6 +150,7 @@ getTotal <- function (sheet.neuron, sheet.spines, sheet.branching){
         # Dendrite branch orders
         dendrite.order <- length(sheet.branching[,1])
         
+
         # Spine Area
         spine.area <- as.numeric(as.character(sheet.spines[,9]))
         spine.area <- mean(spine.area[!is.na(spine.area)])
@@ -199,17 +200,13 @@ inFile.name <- readline("Enter the filename: ")
 inFile.path <- paste(inFile.dir,inFile.name, sep = "\\")
 inFile.group <- getGroup()
 
-# Open the file and read the relevant sheets (Tree Totals-Dendrite)
+# Open the file and read the relevant sheets:
+# 3 - Tree Totals-Dendrite, 5 - Neuron Summary,
+# 12 - Tortuous Distance - Dendrite, 6 - Spine Details
 sheet.branching <- read.xlsx(inFile.path, sheet =  3, colNames=TRUE)
-sheet.neuron    <- read.xlsx(inFile.path, 
-                   sheet = 5, 
-                   colNames=TRUE)
-sheet.distance  <- read.xlsx(inFile.path, 
-                   sheet = 12, 
-                   colNames = TRUE)
-sheet.spines    <- read.xlsx(inFile.path, 
-                   sheet = 6, 
-                   colNames = TRUE)
+sheet.neuron    <- read.xlsx(inFile.path, sheet = 5, colNames=TRUE)
+sheet.distance  <- read.xlsx(inFile.path, sheet = 12, colNames = TRUE)
+sheet.spines    <- read.xlsx(inFile.path, sheet = 6, colNames = TRUE)
 
 # Summary data by branch order, distance from soma, and the entire 
 # apical dendrite
