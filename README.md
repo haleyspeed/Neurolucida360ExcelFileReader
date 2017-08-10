@@ -30,7 +30,9 @@ If you are fortunate enough to have access to Neurolucida360 for 3D neuron recon
   * Each Neurolucida360 xlsx file represents either apical or basal dendrites, not both
 * The version of Neurolucida360 contains automated spine analysis
 * Distance 0 μm is the point at which the dendrite contacts the cell body, not the center of the cell body
-* There is ample memory for running the script repeatedly 
-  * memory.limit() <- increases available memory in R in MB
-  * The script was written and run with 32GB RAM on a 64-bit system
 * Data is imported from and saved to the same directory
+
+### Dependencies
+
+* openxlsx
+* dplyr
