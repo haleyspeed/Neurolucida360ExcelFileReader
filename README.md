@@ -60,19 +60,19 @@ If you are fortunate enough to have access to Neurolucida360 for 3D neuron recon
 
 * Reads in the summary.csv files created by the Neurolucida360ExcelReader.R script
 * Calculates descriptive statistics (mean, sd, se, n)
-* Performs a one-way ANOVA on every possible combination of groups for:
-** Dendrite length
-** Debdrite surface area
-** Dendrite volume
-** Number of dendrite branches
-** Number of orders of dendrites
-** Total spine area
-** Total spine volume
-** Total spine density
-** Thin spine density
-** Stubby spine density
-** Mushroom spine density
-** Filopodia density 
+* Performs a one-way ANOVA on every possible combination of groups for
+  *  Dendrite length
+  *  Dendrite surface area
+  *  Dendrite volume
+  *  Number of dendrite branches
+  *  Number of orders of dendrites
+  *  Total spine area
+  *  Total spine volume
+  *  Total spine density
+  *  Thin spine density
+  *  Stubby spine density
+  *  Mushroom spine density
+  *  Filopodia density 
 * Calculates 95% confidence intervals for each possible combination of groups
 
 
