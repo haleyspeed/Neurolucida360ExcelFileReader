@@ -245,7 +245,7 @@ write.outFile(outFile.summaryData, outFile.summary, outFile.base)
 # Assemble data to be written to the allBranches table
 outFile.branchData <- cbind(outFile.base, branching)
 colnames(outFile.branchData) <- c("cell", "order", "dendriteLength", 
-                                  "denditeSurfaceArea", "dendriteVolume", 
+                                  "dendriteSurfaceArea", "dendriteVolume", 
                                   "spines", "thin", "stubby", 
                                   "mushroom", "filopodia")
 write.outFile(outFile.branchData, outFile.allBranching, outFile.base)
