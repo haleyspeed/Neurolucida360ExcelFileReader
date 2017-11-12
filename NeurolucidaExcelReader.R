@@ -25,10 +25,10 @@ library(dplyr)
 # Function to get the user input for treatment/exposure group
 getGroup <- function () { 
         print("Choose the treatment group:")
-        print("1. Oil + Saline")
-        print("2. Oil + IGF-1")
-        print("3. CPF + Saline")
-        print("4. CPF + IGF-1")
+        print("1. group1")
+        print("2. group2")
+        print("3. group3")
+        print("4. group4")
         groupSelect <- readline("Your selection: ")
         return(checkGroup(groupSelect))
 }
@@ -36,10 +36,10 @@ getGroup <- function () {
 # Function to validate user input        
 checkGroup <- function (groupSelect){
         switch (groupSelect,
-        "1" = {group <- "oil_saline"; return(group)},
-        "2" = {group <- "oil_igf"; return(group)},
-        "3" = {group <- "cpf_saline"; return(group)},
-        "4" = {group <- "cpf_igf"; return(group)},
+        "1" = {group <- "group1"; return(group)},
+        "2" = {group <- "group2"; return(group)},
+        "3" = {group <- "group3"; return(group)},
+        "4" = {group <- "group4"; return(group)},
         {getGroup()})
 }
 
