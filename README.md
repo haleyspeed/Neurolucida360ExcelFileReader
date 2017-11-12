@@ -31,8 +31,8 @@ If you are fortunate enough to have access to Neurolucida360 for 3D neuron recon
 
 #### Things you will need to change
 
-* Edit the getUserInput() function to reflect the number of 
-* distance calculations and variable names if you want different sized Sholl rings (lines 79-124)
+* find and replace "group1", "group2", "group3", and "group4" with your group names
+* Edit the getUserInput() function to reflect the number of distance calculations and variable names if you want different sized Sholl rings (lines 79-124)
 
 #### The sample input data
 
