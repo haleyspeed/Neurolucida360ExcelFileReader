@@ -1,6 +1,6 @@
 author <- "Haley E. Speed, Ph.D."
 analysisDate <- date()
-project <- "Gulf War"
+project <- "Project"
 info <- data.frame(Author = author, Date = analysisDate, Project = project)
 print(info)
 
